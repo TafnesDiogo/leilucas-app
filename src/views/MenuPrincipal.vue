@@ -1,0 +1,43 @@
+<style scoped>
+.menu-container {
+   display: flex;
+   justify-content: center;
+   height: 100vh;
+   flex-direction: column;
+   overflow: hidden;
+}
+</style>
+
+<template>
+  <ion-page>
+    <ion-content>
+      <div class="menu-container">
+        <ion-button expand="block" href="/info"
+          >Conteúdo</ion-button
+        >
+        <ion-button expand="block" router-link="$router.go(-1)" 
+          >Vídeos</ion-button
+        >
+        <ion-button expand="block" router-link="$router.go(-1)" 
+          >Lei Lucas</ion-button
+        >
+        <ion-button expand="block" router-link="$router.go(-1)"
+          >Créditos</ion-button
+        >
+      </div>
+    </ion-content>
+  </ion-page>
+</template>
+
+<script lang="ts">
+import { IonPage, IonContent, IonButton } from "@ionic/vue";
+import MenuRodape from "@/components/MenuRodape.vue";
+
+export default {
+  components: {
+    IonPage,
+    IonContent,
+    IonButton,
+  }
+}
+</script>

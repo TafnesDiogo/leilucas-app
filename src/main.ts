@@ -23,9 +23,19 @@ import '@ionic/vue/css/display.css';
 /* Theme variables */
 import './theme/variables.css';
 
+import InfoBaseLayout from './components/InfoBaseLayout.vue';
+import MensagemAviso from './components/MensagemAviso.vue';
+import InfoAccordion from './components/InfoAccordion.vue';
+import CalloutAtencao from './components/CalloutAtencao.vue';
+
 const app = createApp(App)
   .use(IonicVue)
   .use(router);
+
+app.component('info-base-layout', InfoBaseLayout);
+app.component('mensagem-aviso',  MensagemAviso);
+app.component('info-accordion', InfoAccordion);
+app.component('callout-atencao', CalloutAtencao);
   
 router.isReady().then(() => {
   app.mount('#app');
