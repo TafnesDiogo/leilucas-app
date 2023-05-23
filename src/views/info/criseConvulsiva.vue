@@ -33,7 +33,7 @@
           </ol>
         </info-accordion>
       </ion-accordion-group>
-      <callout-atencao tituloCallout="Importante">
+      <callout-atencao titulo-callout="Importante">
         Não tente forçar a boca da vítima aberta ou introduzir objetos nela
         durante a crise. Se a vítima perder a consciência e parar de respirar,
         inicie o procedimento para parada cardiorrespiratória. Pode ocorrer

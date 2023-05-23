@@ -14,7 +14,6 @@
 <script lang="ts">
 import { IonButton, IonPage } from "@ionic/vue";
 import { defineComponent } from "vue";
-import MenuRodape from "@/components/MenuRodape.vue";
 
 export default defineComponent({
   components: {

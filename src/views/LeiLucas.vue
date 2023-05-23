@@ -1,6 +1,14 @@
 <template>
   <ion-page>
-    <ion-content>
+    <ion-header>
+            <ion-toolbar>
+                <ion-buttons slot="start">
+                    <ion-back-button default-href="/inicio"></ion-back-button>
+                </ion-buttons>
+                <ion-title> Lei Lucas </ion-title>
+            </ion-toolbar>
+        </ion-header>
+    <ion-content class="ion-padding">
       <div align="center">
         <center>
           <table border="0" cellpadding="0" cellspacing="0" width="70%">
@@ -398,3 +406,27 @@
     </ion-content>
   </ion-page>
 </template>
+
+<script lang="ts">
+import {
+  IonPage,
+  IonContent,
+  IonHeader,
+  IonToolbar,
+  IonTitle,
+  IonButtons,
+  IonBackButton
+} from '@ionic/vue';
+
+export default {
+  components: {
+    IonPage,
+    IonContent,
+    IonHeader,
+    IonToolbar,
+    IonTitle,
+    IonButtons,
+    IonBackButton,
+  }
+}
+</script>

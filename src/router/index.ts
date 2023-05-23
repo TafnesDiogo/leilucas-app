@@ -1,16 +1,21 @@
 import { createRouter, createWebHistory } from '@ionic/vue-router';
 import { RouteRecordRaw } from 'vue-router';
-import MenuRodape from '../components/MenuRodape.vue';
 import MenuPrincipal from '../views/MenuPrincipal.vue';
 
 const routes: Array<RouteRecordRaw> = [
   {
     path: '',
+    name: 'Inicio',
     redirect: '/inicio',
   },
   {
     path: '/inicio',
     component: MenuPrincipal,
+  },
+  {
+    path: '/sobre',
+    name: 'Sobre',
+    component: () => import ('../views/Sobre.vue'),
   },
   {
     path: '/loader',
@@ -62,27 +67,10 @@ const routes: Array<RouteRecordRaw> = [
     component: () => import ('../views/info/engasgamentoBebe-layout.vue')
   },
   {
-    path: '/',
-    component: MenuRodape,
-    children: [
-      {
-        path: '',
-        redirect: '/',
-      },
-      {
-        path: 'sobre',
-        component: () => import('../views/MenuInformacoes.vue')
-      },
-      {
-        path: 'emergencia',
-        component: () => import('../views/MenuInformacoes.vue')
-      },
-      {
-        path: 'ajuda',
-        component: () => import('../views/MenuInformacoes.vue')
-      },
-    ]
-  }
+    path: '/LeiLucas',
+    name: 'LeiLucas',
+    component: () => import ('../views/LeiLucas.vue')
+  },
 ]
 
 const router = createRouter({

@@ -13,12 +13,12 @@
 }
 </style>
 
-<script>
+<script lang="ts">
 import { IonSpinner } from "@ionic/vue";
 export default {
     name: "Loader",
     components: {
         IonSpinner,
-    }.
+    },
 }
 </script>

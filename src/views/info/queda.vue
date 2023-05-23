@@ -67,7 +67,7 @@
           </p>
         </info-accordion>
       </ion-accordion-group>
-      <callout-atencao tituloCallout="Atenção">
+      <callout-atencao titulo-callout="Atenção">
         Lembre-se de que a imobilização é uma técnica de emergência e deve ser
         feita apenas por profissionais capacitados. Em caso de dúvidas ou lesões
         graves, chame imediatamente o serviço de emergência ou vá ao hospital

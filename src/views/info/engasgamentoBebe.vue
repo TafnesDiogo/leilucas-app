@@ -101,7 +101,7 @@ ion-card-header + .card-content-md {
       </li>
       <li>Não interrompa as compressões até que o socorro chegue.</li>
     </ol>
-    <callout-atencao tituloCallout="Atenção">
+    <callout-atencao titulo-callout="Atenção">
       A Manobra de Heimlich não deve ser feita em bebês. Para obstrução por
       líquido, use tapas nas costas e opte por aspiração mecânica e
       lateralização da vítima. Tome cuidado com a intensidade dos tapas nas

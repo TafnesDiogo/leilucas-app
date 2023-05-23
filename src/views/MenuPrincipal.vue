@@ -1,10 +1,10 @@
 <style scoped>
 .menu-container {
-   display: flex;
-   justify-content: center;
-   height: 100vh;
-   flex-direction: column;
-   overflow: hidden;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  flex-direction: column;
+  overflow: hidden;
 }
 </style>
 
@@ -12,18 +12,10 @@
   <ion-page>
     <ion-content>
       <div class="menu-container">
-        <ion-button expand="block" href="/info"
-          >Conteúdo</ion-button
-        >
-        <ion-button expand="block" router-link="$router.go(-1)" 
-          >Vídeos</ion-button
-        >
-        <ion-button expand="block" router-link="$router.go(-1)" 
-          >Lei Lucas</ion-button
-        >
-        <ion-button expand="block" router-link="$router.go(-1)"
-          >Créditos</ion-button
-        >
+        <ion-button expand="block" router-link="/info">Conteúdo</ion-button>
+        <ion-button expand="block" router-link="/info">Vídeos</ion-button>
+        <ion-button expand="block" router-link="LeiLucas">Lei Lucas</ion-button>
+        <ion-button expand="block" router-link="/info">Créditos</ion-button>
       </div>
     </ion-content>
   </ion-page>
@@ -38,6 +30,7 @@ export default {
     IonPage,
     IonContent,
     IonButton,
-  }
-}
+    MenuRodape,
+  },
+};
 </script>
