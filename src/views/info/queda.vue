@@ -1,6 +1,6 @@
 <template>
   <ion-page>
-    <info-base-layout tituloPagina="Queda com Traumas">
+    <info-base-layout titulo-pagina="Queda com Traumas">
       <h1>Primeiros Socorros para Quedas com Traumas</h1>
       <mensagem-aviso tipo-emergencia="uma vítima de queda com trauma" />
       <p>
@@ -10,7 +10,7 @@
         evitar a pressão excessiva na área.
       </p>
       <ion-accordion-group expand="inset">
-        <info-accordion tituloAccordion="O que fazer">
+        <info-accordion titulo-accordion="O que fazer">
           <ol>
             <li>
               Cubra o ferimento com gaze estéril, atadura ou bandagem
@@ -37,7 +37,7 @@
             </li>
           </ol>
         </info-accordion>
-        <info-accordion tituloAccordion="Imobilização">
+        <info-accordion titulo-accordion="Imobilização">
           <p>
             Use uma tala, como uma tábua ou um pedaço de madeira, para
             imobilizar a região lesionada. A tala deve ser colocada na parte
@@ -51,7 +51,7 @@
             pulso na região afetada.
           </p>
         </info-accordion>
-        <info-accordion tituloAccordion="Observações Gerais">
+        <info-accordion titulo-accordion="Observações Gerais">
           <p>
             Se houver dúvida sobre a existência de uma fratura, sempre imobilize
             a área afetada.

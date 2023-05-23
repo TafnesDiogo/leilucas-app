@@ -16,7 +16,7 @@ li {
 
 <template>
   <ion-page>
-    <info-base-layout tituloPagina="Engasgamento">
+    <info-base-layout titulo-pagina="Engasgamento">
       <h1>Desobstrução de Vias Aéreas em Vítima com Idade Acima de 01 Ano</h1>
 
       <p>
@@ -26,11 +26,11 @@ li {
       </p>
 
       <mensagem-aviso
-        tipoEmergencia="uma situação de obstrução das vias aéreas"
+        tipo-emergencia="uma situação de obstrução das vias aéreas"
       />
 
       <ion-accordion-group expand="inset">
-        <info-accordion tituloAccordion="Obstrução parcial das vias aéreas">
+        <info-accordion titulo-accordion="Obstrução parcial das vias aéreas">
           <p>
             Se a vítima consegue tossir, falar ou chorar, não tente interferir.
             Incentive-a a continuar tossindo e fique atento.
@@ -41,7 +41,7 @@ li {
           </p>
         </info-accordion>
 
-        <info-accordion tituloAccordion="Obstrução total das vias aéreas">
+        <info-accordion titulo-accordion="Obstrução total das vias aéreas">
           <p>
             Verifique se a vítima está respirando, tossindo, falando ou
             chorando. Se não estiver, chame <b>imediatamente</b> ajuda médica.
@@ -70,7 +70,7 @@ li {
           </p>
         </info-accordion>
 
-        <info-accordion tituloAccordion="Vítima inconsciente com obstrução">
+        <info-accordion titulo-accordion="Vítima inconsciente com obstrução">
           <p>
             Coloque a vítima em posição deitada de barriga para cima. Caso a
             vítima continue com obstrução total sem respirar, inicie

@@ -1,6 +1,6 @@
 <template>
   <ion-page>
-    <info-base-layout tituloPagina="Engasgamento (Menor de 01 ano)">
+    <info-base-layout titulo-pagina="Engasgamento (Menor de 01 ano)">
       <h1>Desobstrução de Vias Aéreas em Bebês com Objetos Sólidos</h1>
       <p>
         Se você se deparar com um bebê que está sufocando devido a um objeto
@@ -13,7 +13,7 @@
         tipo-emergencia="um bebê que está sufocando devido a um objeto sólido"
       />
       <ion-accordion-group expand="inset">
-        <info-accordion tituloAccordion="Obstrução parcial das vias aéreas">
+        <info-accordion titulo-accordion="Obstrução parcial das vias aéreas">
           <p>
             Se o bebê estiver tossindo, chorando ou apresentando outros sinais
             de obstrução parcial, não interfira e observe os sinais de obstrução
@@ -21,7 +21,7 @@
             respiratória ou alteração na cor da pele.
           </p>
         </info-accordion>
-        <info-accordion tituloAccordion="Obstrução total das vias aéreas">
+        <info-accordion titulo-accordion="Obstrução total das vias aéreas">
           <p>
             Se o bebê apresentar sinais de obstrução total, como choro fraco,
             ausência de movimentos respiratórios ou tosse ineficazes, siga os
@@ -51,7 +51,7 @@
             </li>
           </ol>
         </info-accordion>
-        <info-accordion tituloAccordion="Vítima inconsciente com obstrução">
+        <info-accordion titulo-accordion="Vítima inconsciente com obstrução">
           <p>
             Se o bebê ficar inconsciente, comece a reanimação cardiopulmonar
             (RCP).

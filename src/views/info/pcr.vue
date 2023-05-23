@@ -1,13 +1,13 @@
 <template>
   <ion-page>
-    <info-base-layout tituloPagina="titulo">
+    <info-base-layout titulo-pagina="titulo">
       <h1>titulo</h1>
       <p>texto</p>
       <ion-accordion-group expand="inset">
-        <info-accordion tituloAccordion="titulo1">
+        <info-accordion titulo-accordion="titulo1">
           <p>Info</p>
         </info-accordion>
-        <info-accordion tituloAccordion="titulo2">
+        <info-accordion titulo-accordion="titulo2">
           <p>Info</p>
         </info-accordion>
       </ion-accordion-group>
