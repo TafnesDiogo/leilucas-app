@@ -1,6 +1,6 @@
 <template>
   <ion-page>
-    <info-base-layout tituloPagina="Menu de Informações" paginaRetorno="/">
+    <info-base-layout tituloPagina="Menu de Informações" pagina-retorno="/">
       <ion-button
         v-for="tema in temas"
         :router-link="tema.url"

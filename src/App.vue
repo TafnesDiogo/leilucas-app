@@ -16,13 +16,6 @@
 import { IonApp, IonRouterOutlet, IonContent } from "@ionic/vue";
 import MenuRodape from "./components/MenuRodape.vue";
 import { defineComponent } from "vue";
-/*
-  import { SplashScreen } from '@capacitor/splash-screen';
-
-  await SplashScreen.show({
-    showDuration: 3000,
-    autoHide: true,
-  });*/
 
 export default defineComponent({
   name: "App",

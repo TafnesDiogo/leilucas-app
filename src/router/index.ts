@@ -15,11 +15,17 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: '/sobre',
     name: 'Sobre',
-    component: () => import ('../views/Sobre.vue'),
+    component: () => import ('../views/Sobre.vue')
   },
   {
-    path: '/loader',
-    component: () => import ('../views/Loader.vue'),
+    path: '/como-usar',
+    name: 'ComoUsar',
+    component: () => import ('../views/ComoUsar.vue')
+  },
+  {
+    path: '/creditos',
+    name: 'Creditos',
+    component: () => import ('../views/Creditos.vue')
   },
   {
     path: '/info',
