@@ -1,21 +1,14 @@
 <template>
   <ion-page>
-    <ion-header>
-            <ion-toolbar>
-                <ion-buttons slot="start">
-                    <ion-back-button default-href="/inicio"></ion-back-button>
-                </ion-buttons>
-                <ion-title> Lei Lucas </ion-title>
-            </ion-toolbar>
-        </ion-header>
-    <ion-content class="ion-padding">
+    <app-cabecalho />
+    <ion-content class="ion-padding" style="padding-bottom: 26px;">
       <div align="center">
         <center>
-          <table border="0" cellpadding="0" cellspacing="0" width="70%">
+          <table border="0" cellpadding="0" cellspacing="0" width="100%">
             <tbody>
               <tr>
-                <td width="14%">
-                  <p align="center">
+                <td>
+                  <p align="center" style="text-align: center;">
                     <font face="Arial" size="2">
                       <img
                         alt="Brasão das Armas Nacionais da República Federativa do Brasil"
@@ -25,8 +18,6 @@
                       />
                     </font>
                   </p>
-                </td>
-                <td width="86%">
                   <p align="center" style="text-align: center">
                     <strong>
                       <span
@@ -360,6 +351,8 @@
 </template>
 
 <script lang="ts">
+import AppCabecalho from '@/components/AppCabecalho.vue';
+
 import {
   IonPage,
   IonContent,
@@ -379,6 +372,7 @@ export default {
     IonTitle,
     IonButtons,
     IonBackButton,
+    AppCabecalho,
   }
 }
 </script>

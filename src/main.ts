@@ -24,7 +24,7 @@ import '@ionic/vue/css/display.css';
 import './theme/variables.css';
 import './theme/core.css';
 
-import InfoBaseLayout from './components/InfoBaseLayout.vue';
+import BaseLayout from './components/BaseLayout.vue';
 import MensagemAviso from './components/MensagemAviso.vue';
 import InfoAccordion from './components/InfoAccordion.vue';
 import CalloutAtencao from './components/CalloutAtencao.vue';
@@ -33,7 +33,7 @@ const app = createApp(App)
   .use(IonicVue)
   .use(router);
 
-app.component('info-base-layout', InfoBaseLayout);
+app.component('base-layout', BaseLayout);
 app.component('mensagem-aviso',  MensagemAviso);
 app.component('info-accordion', InfoAccordion);
 app.component('callout-atencao', CalloutAtencao);

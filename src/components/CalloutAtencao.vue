@@ -19,13 +19,26 @@ ion-card-header.ios {
     margin-left: -20px;
     text-align: center;
 }
+
+ion-card-title.md {
+    display: flex;
+    justify-content: flex-start;
+    text-align: left;
+    gap: 0.3em;
+}
+
+ion-card-title ion-icon.md {
+    align-self: flex-start;
+    font-size: 2em;
+    height: 25px;
+}
 </style>
 
 <template>
   <ion-card color="danger">
     <ion-card-header>
       <ion-card-title>
-        <ion-icon :icon="warningSharp"></ion-icon>&nbsp;&nbsp;{{ tituloCallout }}
+        <ion-icon :icon="warningSharp"></ion-icon>{{ titulo }}
       </ion-card-title>
     </ion-card-header>
     <ion-card-content>
@@ -46,7 +59,7 @@ import {
 } from '@ionic/vue';
 
 export default defineComponent({
-    props: ["tituloCallout"],
+    props: ["titulo"],
     name: "callout-atencao",
     components: {
       IonCard,

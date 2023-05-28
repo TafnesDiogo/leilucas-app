@@ -1,13 +1,30 @@
+<style scoped>
+a[color="danger"] {
+    color: var(--ion-color-danger);
+}
+
+a[color="secondary"] {
+    color: var(--ion-color-secondary);
+}
+
+.container {
+  padding-top: 16px;
+}
+</style>
+
 <template>
   <ion-page>
-    <info-base-layout tituloPagina="Menu de Informações" pagina-retorno="/">
-      <ion-button
+    <base-layout>
+    <div class="container">
+      <router-link
         v-for="tema in temas"
-        :router-link="tema.url"
-        expand="block"
-        >{{ tema.title }}</ion-button
-      >
-    </info-base-layout>
+        :key="tema.id"
+        :to="`/info/${tema.id}`"
+        :color="tema.color">
+        <ion-button :color="tema.color" expand="block">{{ tema.nome }}</ion-button>
+      </router-link>
+    </div>
+    </base-layout>
   </ion-page>
 </template>
 
@@ -23,38 +40,15 @@ export default defineComponent({
   data() {
     return {
       temas: [
-        {
-          title: "Engasgamento em Bebê",
-          url: "/info/EngasgamentoBebe",
-        },
-        {
-          title: "Engasgamento",
-          url: "/info/Engasgamento",
-        },
-        {
-          title: "Quedas com Traumas",
-          url: "/info/QuedascomTraumas",
-        },
-        {
-          title: "Crise Convulsiva",
-          url: "/info/CriseConvulsiva",
-        },
-        {
-          title: "Hemorragias",
-          url: "/info/Hemorragias",
-        },
-        {
-          title: "Parada Cardiorrespiratória",
-          url: "/info/PCR",
-        },
-        {
-          title: "Queimaduras",
-          url: "/info/Queimaduras",
-        },
-        {
-          title: "Acidente com Animais Peçonhentos",
-          url: "/info/AnimaisPeçonhentos",
-        },
+        { id: 1, nome: "Engasgamento em Bebê", color: "secondary" },
+        { id: 2, nome: "Engasgamento", color: "secondary" },
+        { id: 3, nome: "Quedas com Trauma", color: "secondary" },
+        { id: 4, nome: "Crise Convulsiva", color: "secondary" },
+        { id: 5, nome: "Hemorragias", color: "secondary" },
+        { id: 6, nome: "Parada Cardiorrespiratória", color: "secondary" },
+        { id: 7, nome: "Queimaduras", color: "secondary" },
+        { id: 8, nome: "Acidente com Animais Peçonhentos", color: "secondary" },
+        { id: 9, nome: "Ligar para Emergência", color: "danger" },
       ],
     };
   },

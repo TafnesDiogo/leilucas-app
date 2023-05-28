@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from '@ionic/vue-router';
 import { RouteRecordRaw } from 'vue-router';
 import MenuPrincipal from '../views/MenuPrincipal.vue';
+import InfoPage from '../views/InfoPage.vue';
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -14,17 +15,17 @@ const routes: Array<RouteRecordRaw> = [
   },
   {
     path: '/sobre',
-    name: 'Sobre',
+    name: 'SobrePage',
     component: () => import ('../views/Sobre.vue')
   },
   {
     path: '/como-usar',
-    name: 'ComoUsar',
+    name: 'ComoUsarPage',
     component: () => import ('../views/ComoUsar.vue')
   },
   {
     path: '/creditos',
-    name: 'Creditos',
+    name: 'CreditosPage',
     component: () => import ('../views/Creditos.vue')
   },
   {
@@ -33,48 +34,14 @@ const routes: Array<RouteRecordRaw> = [
     component: () => import ('../views/MenuInformacoes.vue')
   },
   {
-    path: '/info/Engasgamento',
-    name: 'EngasgamentoPage',
-    component: () => import ('../views/info/engasgamento.vue')
+    path: '/info/:id',
+    component: InfoPage,
+    name: 'InfoPage',
+    props: true,
   },
   {
-    path: '/info/QuedascomTraumas',
-    name: 'QuedasPage',
-    component: () => import ('../views/info/queda.vue')
-  },
-  {
-    path: '/info/CriseConvulsiva',
-    name: 'CriseConvulsivaPage',
-    component: () => import ('../views/info/criseConvulsiva.vue')
-  },
-  {
-    path: '/info/Hemorragias',
-    name: 'HemorragiasPage',
-    component: () => import ('../views/info/hemorragias.vue')
-  },
-  {
-    path: '/info/PCR',
-    name: 'PCRpage',
-    component: () => import ('../views/info/pcr.vue')
-  },
-  {
-    path: '/info/Queimaduras',
-    name: 'QueimadurasPage',
-    component: () => import ('../views/info/queimaduras.vue')
-  },
-  {
-    path: '/info/AnimaisPeçonhentos',
-    name: 'AnimaisPeconhentosPage',
-    component: () => import ('../views/info/animaisPeconhentos.vue')
-  },
-  {
-    path: '/info/EngasgamentoBebe',
-    name: 'EngasgamentoBebePage',
-    component: () => import ('../views/info/engasgamentoBebe-layout.vue')
-  },
-  {
-    path: '/LeiLucas',
-    name: 'LeiLucas',
+    path: '/leilucas',
+    name: 'LeiLucasPage',
     component: () => import ('../views/LeiLucas.vue')
   },
 ]

@@ -7,13 +7,6 @@ const config: CapacitorConfig = {
   server: {
     androidScheme: "https",
   },
-
-  plugins: {
-    SplashScreen: {
-      launchShowDuration: 3000,
-      icon: "@/assets/icone.png",
-    },
-  },
 };
 
 export default config;

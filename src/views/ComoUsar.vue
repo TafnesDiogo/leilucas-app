@@ -1,13 +1,13 @@
 <template>
   <ion-page>
-    <info-base-layout titulo-pagina="Como Usar" pagina-retorno="router.go(Inicio)">
+    <base-layout titulo="Como Usar">
       <p>
         Bem-vindo à página 'Como usar' do nosso aplicativo Lei Lucas Primeiros
         Socorros! Aqui, forneceremos algumas orientações para ajudar você a
         aproveitar ao máximo as funcionalidades e recursos disponíveis
       </p>
       <ion-accordion-group expand="inset">
-        <info-accordion titulo-accordion="Menu Principal">
+        <info-accordion titulo="Menu Principal">
           <h2>Conteúdo</h2>
           <p>
             Toque no botão 'Conteúdo' para acessar informações escritas e
@@ -33,7 +33,7 @@
             sobre a aplicação, como a disciplina, professores e colaboradores.
           </p>
         </info-accordion>
-        <info-accordion titulo-accordion="Barra de Navegação Inferior">
+        <info-accordion titulo="Barra de Navegação Inferior">
           <h2>Emergência</h2>
           <p>
             Emergência é o botão do meio, em tamanho destacado. Em situações de
@@ -50,18 +50,19 @@
           </p>
         </info-accordion>
       </ion-accordion-group>
-    </info-base-layout>
+    </base-layout>
   </ion-page>
 </template>
 
 <script lang="ts">
-import { IonPage } from "@ionic/vue";
+import { IonPage, IonAccordionGroup } from "@ionic/vue";
 import InfoAccordion from "@/components/InfoAccordion.vue";
 
 export default {
   components: {
     IonPage,
     InfoAccordion,
+    IonAccordionGroup,
   },
 };
 </script>

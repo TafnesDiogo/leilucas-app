@@ -1,7 +1,55 @@
 <style scoped>
 ion-content {
-  overflow: hidden;
+  --background: linear-gradient(
+      180deg,
+      rgba(0, 185, 250, 0.45) 23.43%,
+      rgba(0, 185, 250, 0) 99.98%
+    ),
+    linear-gradient(
+      360deg,
+      rgba(255, 0, 0, 0.37) 55.1%,
+      rgba(255, 0, 0, 0) 100%
+    ),
+    url(@/assets/imagens/background.png);
 }
+
+ion-grid.md {
+  height: calc(100% - 56px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  align-content: space-around;
+  gap: 7vh;
+  padding: 0;
+}
+
+ion-col.md {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+}
+
+ion-avatar.md {
+  background: white;
+  padding: 10px;
+  min-width: 96px;
+  min-height: 96px;
+  overflow: hidden;
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+}
+
+ion-avatar.md img {
+  height: auto;
+}
+
+ion-avatar a img {
+  padding: 6px;
+}
+
 .menu-container {
   display: flex;
   justify-content: center;
@@ -9,31 +57,86 @@ ion-content {
   flex-direction: column;
   overflow: hidden;
 }
+
+ion-col.md.logo:before,
+ion-col.md.logo:after {
+  content: "";
+  display: block;
+  width: calc(50% - 389.5px);
+  height: 100%;
+  background-image: url(../assets/imagens/lei_lucas_line.png);
+}
+
+@media (prefers-color-scheme: dark) {
+  ion-content {
+    --background: linear-gradient(
+        180deg,
+        rgba(31, 138, 175, 0.45) 23.43%,
+        rgba(31, 138, 175, 0) 99.98%
+      ),
+      linear-gradient(
+        360deg,
+        rgba(165, 19, 19, 0.37) 55.1%,
+        rgba(165, 19, 19, 0) 100%
+      ),
+      url("../assets/imagens/dark-mode/background.png");
+  }
+
+  ion-avatar.md {
+    background: rgba(0, 0, 0, 0.8);
+  }
+}
 </style>
 
 <template>
   <ion-page>
-    <ion-content class="ion-padding">
-      <div class="menu-container">
-        <ion-button expand="block" router-link="/info">Conteúdo</ion-button>
-        <ion-button expand="block" router-link="/info">Vídeos</ion-button>
-        <ion-button expand="block" router-link="LeiLucas">Lei Lucas</ion-button>
-        <ion-button expand="block" router-link="Creditos">Créditos</ion-button>
-      </div>
+    <app-cabecalho />
+    <ion-content>
+      <ion-grid>
+        <ion-row>
+          <menu-principal-icones rota="MenuInformacoesPage" titulo="Conteúdo"
+            ><img src="../assets/icons/conteudo.png" />
+          </menu-principal-icones>
+          <menu-principal-icones
+            rota="https://www.google.com/maps/"
+            titulo="Localização"
+            :interno="false"
+          >
+            <img src="../assets/icons/localizacao.png"
+          /></menu-principal-icones>
+        </ion-row>
+        <ion-row>
+          <ion-col class="logo">
+            <img src="/src/assets/imagens/lei_lucas.png" />
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <menu-principal-icones titulo="Lei Lucas" rota="LeiLucasPage">
+            <img src="../assets/icons/lei.png" />
+          </menu-principal-icones>
+          <menu-principal-icones titulo="Créditos" rota="CreditosPage">
+            <img src="../assets/icons/informacao.png" />
+          </menu-principal-icones>
+        </ion-row>
+      </ion-grid>
     </ion-content>
   </ion-page>
 </template>
 
 <script lang="ts">
-import { IonPage, IonContent, IonButton } from "@ionic/vue";
-import MenuRodape from "@/components/MenuRodape.vue";
+import { IonPage, IonContent, IonGrid, IonRow, IonCol } from "@ionic/vue";
+import AppCabecalho from "@/components/AppCabecalho.vue";
+import MenuPrincipalIcones from "@/components/MenuPrincipalIcones.vue";
 
 export default {
   components: {
     IonPage,
     IonContent,
-    IonButton,
-    MenuRodape,
+    IonGrid,
+    IonRow,
+    IonCol,
+    AppCabecalho,
+    MenuPrincipalIcones,
   },
 };
 </script>
