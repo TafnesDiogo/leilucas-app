@@ -149,7 +149,7 @@ export default defineComponent({
           descricao:
             "A obstrução das vias aéreas é uma emergência médica que pode acontecer a qualquer pessoa, e pode ser causada por um corpo estranho, alimentos ou vômitos.",
           aviso: "uma situação de obstrução das vias aéreas",
-          videoUrl: videoEngasgamentoBebe,
+          videoUrl: videoEngasgamentoAdulto,
           itens: [
             {
               titulo: "Obstrução parcial das vias aéreas",
@@ -203,7 +203,7 @@ export default defineComponent({
         guia simples que descreve como desobstruir as vias aéreas em bebês com
         objetos sólidos:`,
           aviso: "um bebê que está sufocando devido a um objeto sólido",
-          videoUrl: videoEngasgamentoAdulto,
+          videoUrl: videoEngasgamentoBebe,
           itens: [
             {
               titulo: "Obstrução parcial das vias aéreas",

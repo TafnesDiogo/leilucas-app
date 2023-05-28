@@ -49,7 +49,7 @@ p:last-child {
 
 <script lang="ts">
 import { IonPage } from "@ionic/vue";
-import { ref, watch, watchEffect } from "vue";
+import { watchEffect } from "vue";
 import logoUSCEscuro from "@/assets/imagens/dark-mode/logo_usc.png";
 import logoCursoEscuro from "@/assets/imagens/dark-mode/logo_curso.png";
 import logoReitoriaEscuro from "@/assets/imagens/dark-mode/logo_reitoria.png";
@@ -90,8 +90,8 @@ export default {
         });
     },
 
-    atualizarLogo(modoClaro: boolean) {
-      if (modoClaro) {
+    atualizarLogo(modoEscuro: boolean) {
+      if (modoEscuro) {
         this.logoUSC = logoUSCEscuro;
         this.logoCurso = logoCursoEscuro;
         this.logoReitoria = logoReitoriaEscuro;

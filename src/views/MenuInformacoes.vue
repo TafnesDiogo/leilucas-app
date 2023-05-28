@@ -48,7 +48,7 @@ export default defineComponent({
         { id: 6, nome: "Parada Cardiorrespiratória", color: "secondary" },
         { id: 7, nome: "Queimaduras", color: "secondary" },
         { id: 8, nome: "Acidente com Animais Peçonhentos", color: "secondary" },
-        { id: 9, nome: "Ligar para Emergência", color: "danger" },
+        { id: 9, nome: "Como Ligar para Emergência", color: "danger" },
       ],
     };
   },

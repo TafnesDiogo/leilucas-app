@@ -95,10 +95,10 @@ import {
   IonAlert,
 } from "@ionic/vue";
 import { addCircleSharp } from "ionicons/icons";
-import { watchEffect, ref } from "vue";
+import { actionSheetController } from "@ionic/core";
+import { watchEffect } from "vue";
 import botaoClaro from "../assets/imagens/emergencia.png";
 import botaoEscuro from "../assets/imagens/dark-mode/emergencia.png";
-import { actionSheetController } from "@ionic/core";
 
 export default {
   components: {
@@ -155,23 +155,23 @@ export default {
     ];
 
     const botoesActionSheet = [
-          {
-            text: "SAMU 192",
-            handler: () => {
-              window.open("tel:192", "_system");
-            },
-          },
-          {
-            text: "Bombeiros 193",
-            handler: () => {
-              window.open("tel:193", "_system");
-            },
-          },
-          {
-            text: "Cancelar",
-            role: "cancel",
-          },
-        ];
+      {
+        text: "SAMU 192",
+        handler: () => {
+          window.open("tel:192", "_system");
+        },
+      },
+      {
+        text: "Bombeiros 193",
+        handler: () => {
+          window.open("tel:193", "_system");
+        },
+      },
+      {
+        text: "Cancelar",
+        role: "cancel",
+      },
+    ];
 
     return { botoesAlerta, botoesActionSheet };
   },
@@ -179,26 +179,33 @@ export default {
   data() {
     return {
       addCircleSharp,
-      botaoEmergenciaImagem: ref(""),
+      botaoEmergenciaImagem: botaoClaro,
     };
   },
   mounted() {
+    const prefereModoEscuro = window.matchMedia("(prefers-color-scheme: dark)");
+
     this.detectarModoClaroEscuro();
+
+    watchEffect(() => {
+      this.atualizarImagemBotao(prefereModoEscuro.matches);
+    });
   },
   methods: {
     detectarModoClaroEscuro() {
-      this.atualizarLogo(
+      this.atualizarImagemBotao(
         window.matchMedia("(prefers-color-scheme: dark)").matches
       );
 
-      watchEffect(() => {
-        this.atualizarLogo(
-          window.matchMedia("(prefers-color-scheme: dark)").matches
-        );
-      });
+      window
+        .matchMedia("(prefers-color-scheme: dark)")
+        .addEventListener("change", (event) => {
+          this.atualizarImagemBotao(event.matches);
+        });
     },
-    atualizarLogo(modoClaro: boolean) {
-      if (modoClaro) {
+
+    atualizarImagemBotao(modoEscuro: boolean) {
+      if (modoEscuro) {
         this.botaoEmergenciaImagem = botaoEscuro;
       } else {
         this.botaoEmergenciaImagem = botaoClaro;
