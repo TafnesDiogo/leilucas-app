@@ -1,28 +1,35 @@
 <style>
-ion-col.md {
+ion-col {
   align-items: center;
   display: flex;
   justify-content: center;
   padding: 0;
 }
 
-ion-avatar.md {
+ion-avatar {
   background: white;
   padding: 10px;
-  min-width: 96px;
-  min-height: 96px;
+  width: 96px;
+  height: 96px;
   overflow: hidden;
   border-radius: 50%;
   position: relative;
   cursor: pointer;
 }
 
-ion-avatar.md img {
+ion-avatar img {
   height: auto;
 }
 
 ion-avatar a img {
   width: 100%;
+}
+
+@media (orientation: landscape) {
+  ion-avatar.md {
+    max-width: 20vmin;
+    max-height: 20vmin;
+}
 }
 </style>
 

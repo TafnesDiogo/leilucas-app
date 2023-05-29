@@ -5,19 +5,24 @@ li {
   text-align: justify;
 }
 
+h1 + p {
+  margin-top: 0px;
+}
+
 ion-content > ion-title {
   padding: 0;
 }
 
 ion-content h1:first-child {
-    margin-top: 5px;
+  margin-top: 13px;
+  margin-bottom: 6px;
 }
 </style>
 
 <template>
   <app-cabecalho />
   <ion-content class="ion-padding" id="animacao-conteudo">
-    <h1 v-if="titulo"> {{ titulo }} </h1>
+    <h1 v-if="titulo">{{ titulo }}</h1>
     <slot />
   </ion-content>
 </template>
@@ -33,7 +38,7 @@ export default defineComponent({
     titulo: {
       type: String,
       default: undefined,
-    }
+    },
   },
   name: "base-layout",
   components: {

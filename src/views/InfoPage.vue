@@ -9,7 +9,7 @@ ion-accordion .ion-padding p:last-child {
 
 video {
   width: calc(100% + 32px);
-  margin-left: -16px;
+  margin: 10px 0 0 -16px;
 }
 
 ion-button {
@@ -29,11 +29,11 @@ ion-button {
       <h1>{{ info.subtitulo }}</h1>
 
       <div v-if="info.videoUrl">
-      <video ref="videoPlayer" controls>
-        <source :src="info.videoUrl" type="video/mp4" />
-        Seu navegador não suporta a reprodução de vídeo.
-      </video>
-    </div>
+        <video ref="videoPlayer" controls>
+          <source :src="info.videoUrl" type="video/mp4" />
+          Seu navegador não suporta a reprodução de vídeo.
+        </video>
+      </div>
 
       <p v-html="info.descricao"></p>
 
@@ -51,8 +51,8 @@ ion-button {
       <callout-atencao
         v-if="info.callout && info.callout.antesDosItens == true"
         :titulo="info.callout.titulo"
-        ><div v-html="info.callout.conteudo"/></callout-atencao
-      >
+        ><div v-html="info.callout.conteudo"
+      /></callout-atencao>
 
       <ion-accordion-group expand="inset">
         <info-accordion
@@ -67,8 +67,8 @@ ion-button {
       <callout-atencao
         v-if="info.callout && info.callout.antesDosItens != true"
         :titulo="info.callout.titulo"
-        ><div v-html="info.callout.conteudo"/></callout-atencao
-      >
+        ><div v-html="info.callout.conteudo"
+      /></callout-atencao>
       <div v-if="info.conteudoAdicional" v-html="info.conteudoAdicional" />
     </base-layout>
   </ion-page>
@@ -527,38 +527,37 @@ export default defineComponent({
             {
               titulo: "Primeiros Socorros",
               conteudo: `
-                <ul>
-                    <li>
-                    <strong>Resfrie a região afetada:</strong> Lave a queimadura com água
+                    <h2>Resfrie a região afetada</h2>
+                    Lave a queimadura com água
                     corrente em temperatura ambiente, por pelo menos 20 minutos. Não
                     utilize água quente ou gelada, pois isso pode agravar a lesão. Se
                     possível, retire roupas ou objetos que estejam cobrindo a área
                     queimada.
-                    </li>
-                    <li>
-                    <strong>Não rompa as bolhas:</strong> As bolhas são uma forma do organismo
+
+                    <h2>Não rompa as bolhas</h2>
+                    As bolhas são uma forma do organismo
                     proteger a lesão. Não as estoure ou retire a pele queimada, pois
                     isso pode aumentar o risco de infecção e agravar a lesão.
-                    </li>
-                    <li>
-                    <strong>Hidrate o ferimento:</strong> Se tiver à mão, <b>use soro fisiológico</b>
+
+                    <h2>Hidrate o ferimento</h2>
+                    Se tiver à mão, <b>use soro fisiológico</b>
                     para hidratar a queimadura. Não coloque nenhuma outra substância,
                     como pasta de dente, pó de café ou óleos, pois isso pode
                     contaminar a lesão e piorar a situação.
-                    </li>
-                    <li>
-                    <strong>Procure um médico:</strong> Se a queimadura for de segundo ou
+                    
+                    <h2>Procure um médico</h2>
+                    Se a queimadura for de segundo ou
                     terceiro grau, se a área queimada for grande, se houver dor
                     intensa ou se você tiver dúvidas sobre como proceder, procure um
                     médico imediatamente. O profissional pode avaliar a gravidade da
                     lesão e indicar o tratamento adequado.
-                    </li>
-                    <li>
-                    <strong>Evite cobrir a lesão:</strong> Não cubra a queimadura com tecidos ou
+                    
+                    <h2>Evite cobrir a lesão</h2>
+                    Não cubra a queimadura com tecidos ou
                     outros materiais. A área queimada precisa respirar para se
                     recuperar adequadamente. Se necessário, o médico pode indicar o
                     uso de curativos específicos.
-                    </li>`,
+                    `,
             },
           ],
           callout: {
@@ -643,41 +642,44 @@ export default defineComponent({
         },
         9: {
           titulo: "Ligar para Emergência",
-          subtitulo: "Como Ligar para Emergência",
-          descricao:
-            `Antes de tudo, mantenha a calma. Se você precisar entrar em contato com o
+          subtitulo: "Como Ligar para a Emergência",
+          descricao: `Antes de tudo, mantenha a calma. Se você precisar entrar em contato com o
             atendimento de emergência, clique no símbolo do rodapé.`,
           itens: [
             {
-              titulo: 'Antes de tudo',
+              titulo: "Antes de tudo",
               conteudo: `
               <p>Há uma série de informações que você precisa ter em mãos antes de iniciar seu
               contato com o atendimento de emergência.</p>
-              <ul>
-                <li>
-                  <b>Sua localização:</b> endereço completo e ponto de referência. <br />Caso
+                
+                  <h2>Sua localização</h2>
+                  Inclui endereço completo e ponto de referência. <br />Caso
                   não saiba, procure algum morador, placas ou localize-se por um aplicativo de
-                  GPS, como o Google Maps.
-                </li>
-                <li>
-                  <b>O que está acontecendo com a vítima:</b> importante informar com clareza
-                  e calma o que aconteceu, para que os atendentes possam agilizar o
+                  GPS, como o <a href="https://www.google.com/maps/" target="_blank">Google Maps</a>.
+                
+                
+                  <h2>O que está acontecendo com a vítima</h2>
+                  É de suma importância estar próximo à vítima para informar com clareza
+                  e calma o que aconteceu, assim os atendentes podem agilizar o
                   atendimento e te orientar sobre as atitudes que podem ser tomadas no local.
-                </li>
-                <li><b>Mantenha a calma:</b> o atendente que vai te atender quer te ajudar, mas
+                
+                  <h2>Mantenha a calma</h2>
+                  O atendente que vai te atender quer te ajudar, mas
                   para que o atendimento seja efetivo, ele também precisa da sua cooperação. 
                   Lembre-se que o profissional em socorro está do outro lado da linha. Portanto, 
                   responda as perguntas que lhe forem feitas com calma e clareza, faça o que lhe 
                   for orientado. Sua atitude pode salvar vidas! Ajude os profissionais de segurança
-                  pública a te ajudarem.</li>
-                <li><b>Para quem ligar:</b> no Brasil, temos dois números de atendimento disponíveis
+                  pública a te ajudarem.
+
+                  <h2>Para quem ligar</h2>
+                  No Brasil, temos dois números de atendimento disponíveis
                   para contato: 192 (SAMU) e 193 (Corpo de Bombeiros). O atendimento realizado por
                   estes órgãos são diferentes, e o contato com o correto irá agilizar no socorro da 
-                  vítima.</li>
-                </ul>`,
+                  vítima. Veja abaixo os atendimentos específicos de cada órgão.
+                  `,
             },
             {
-              titulo: 'SAMU (192)',
+              titulo: "SAMU (192)",
               conteudo: `
               <p>A SAMU possui equipe composta por médicos, enfermeiros auxiliares de enfermagem e
               condutores socorristas, e realiza atendimento de <b>casos clínicos</b>,
@@ -694,7 +696,7 @@ export default defineComponent({
               </ul>`,
             },
             {
-              titulo: 'Corpo de Bombeiros (193)',
+              titulo: "Corpo de Bombeiros (193)",
               conteudo: `
               <p>O Corpo de Bombeiros realiza atendimentos
               em literalmente qualquer lugar. Seus profissionais são treinados para o
@@ -722,7 +724,7 @@ export default defineComponent({
                 </li>
               </ul>`,
             },
-          ]
+          ],
         },
       };
 

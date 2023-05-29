@@ -5,19 +5,30 @@ ion-card-header + ion-card-content {
     letter-spacing: -0.025em;
 }
 
-.card-content-md {
-  margin: 0 25px 10px;
-}
-ion-card-header.md {
-    margin-left: -5px;
-}
-
 .card-content-ios {
     margin: 0 20px 8px;
 }
+
 ion-card-header.ios {
-    margin-left: -20px;
+    margin-left: -35px;
     text-align: center;
+}
+
+ion-card-title.ios ion-icon {
+    width: 25px;
+    margin-right: 10px;
+}
+
+ion-card.md {
+    margin: 10px 0;
+}
+
+.card-content-md {
+  margin: 0 25px 10px;
+}
+
+ion-card-header.md {
+    margin-left: -5px;
 }
 
 ion-card-title.md {

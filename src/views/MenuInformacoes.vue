@@ -1,10 +1,6 @@
 <style scoped>
-a[color="danger"] {
-    color: var(--ion-color-danger);
-}
-
-a[color="secondary"] {
-    color: var(--ion-color-secondary);
+a {
+    color: transparent;
 }
 
 .container {
@@ -40,8 +36,8 @@ export default defineComponent({
   data() {
     return {
       temas: [
-        { id: 1, nome: "Engasgamento em Bebê", color: "secondary" },
-        { id: 2, nome: "Engasgamento", color: "secondary" },
+        { id: 1, nome: "Engasgamento", color: "secondary" },
+        { id: 2, nome: "Engasgamento em Bebê", color: "secondary" },
         { id: 3, nome: "Quedas com Trauma", color: "secondary" },
         { id: 4, nome: "Crise Convulsiva", color: "secondary" },
         { id: 5, nome: "Hemorragias", color: "secondary" },

@@ -47,6 +47,18 @@ ion-buttons ion-button {
 }
 </style>
 
+<style>
+.alert-button.sc-ion-alert-md {
+  color: var(--ion-color-secondary);
+}
+
+@media (prefers-color-scheme: dark) {
+  .alert-button.sc-ion-alert-md {
+    color: #549fd9;
+  }
+}
+</style>
+
 <template>
   <ion-alert
     trigger="aviso-ligacao"

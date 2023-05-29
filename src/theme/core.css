@@ -46,12 +46,6 @@
     font-style: italic;
 }
 
-ion-content.ion-padding {
-    --padding-bottom: 22px;
-    max-height: calc(100% - 112px);
-    bottom: 56px;
-}
-
 :root {
     --ion-font-family: 'corpo';
 }
@@ -63,4 +57,18 @@ h1, h2, h3, h4, h5, h6 {
 
 ol, ul {
     padding-left: 1.2em;
+}
+
+ion-content.ion-padding.md {
+    --padding-bottom: 22px;
+    max-height: calc(100% - 112px);
+    bottom: 56px;
+}
+
+ion-content.ion-padding.ios {
+    --padding-bottom: 52px;
+}
+
+ion-accordion-group.md {
+    margin: 0;
 }

@@ -6,12 +6,19 @@
 
 img.header-img {
   position: absolute;
-  top: 15px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 11;
   width: calc(100% - 96px);
   max-width: 264px;
+}
+
+ion-app.ios img.header-img {
+  top: 4px;
+}
+
+ion-app.md img.header-img {
+  top: 15px;
 }
 
 ion-header {

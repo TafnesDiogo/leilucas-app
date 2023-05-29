@@ -13,7 +13,7 @@ ion-content {
     url(@/assets/imagens/background.png);
 }
 
-ion-grid.md {
+ion-grid {
   height: calc(100% - 56px);
   display: flex;
   flex-direction: column;
@@ -24,32 +24,6 @@ ion-grid.md {
   padding: 0;
 }
 
-ion-col.md {
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  padding: 0;
-}
-
-ion-avatar.md {
-  background: white;
-  padding: 10px;
-  min-width: 96px;
-  min-height: 96px;
-  overflow: hidden;
-  border-radius: 50%;
-  position: relative;
-  cursor: pointer;
-}
-
-ion-avatar.md img {
-  height: auto;
-}
-
-ion-avatar a img {
-  padding: 6px;
-}
-
 .menu-container {
   display: flex;
   justify-content: center;
@@ -58,13 +32,14 @@ ion-avatar a img {
   overflow: hidden;
 }
 
-ion-col.md.logo:before,
-ion-col.md.logo:after {
+ion-col.logo:before,
+ion-col.logo:after {
   content: "";
   display: block;
   width: calc(50% - 389.5px);
   height: 100%;
   background-image: url(../assets/imagens/lei_lucas_line.png);
+  background-size: contain;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -82,7 +57,7 @@ ion-col.md.logo:after {
       url("../assets/imagens/dark-mode/background.png");
   }
 
-  ion-avatar.md {
+  ion-avatar {
     background: rgba(0, 0, 0, 0.8);
   }
 }
