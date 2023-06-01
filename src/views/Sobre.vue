@@ -3,9 +3,9 @@
     <base-layout titulo="Sobre o APP">
       <p>
         Bem-vindo à página 'Sobre o APP' do aplicativo Lei Lucas Primeiros
-        Socorros! Este aplicativo foi desenvolvido com o objetivo de promover a
-        preparação de profissionais da rede estudantil em primeiros socorros, de
-        acordo com a Lei Lucas.
+        Socorros! Este aplicativo foi desenvolvido para fornecer informações
+        didáticas sobre primeiros socorros, com foco nos funcionários de
+        instituições de ensino que tenham feito o curso da Lei Lucas.
         <callout-atencao titulo="Atenção">
           <p>
             Este aplicativo é apenas informativo e não substitui um curso

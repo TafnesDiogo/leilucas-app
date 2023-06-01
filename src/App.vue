@@ -76,5 +76,5 @@ const options = {
   color: rootStyles.getPropertyValue('--ion-color-primary-shade').trim(),
 };
 
-StatusBar.setBackgroundColor(options)
+StatusBar.setBackgroundColor(options);
 </script>

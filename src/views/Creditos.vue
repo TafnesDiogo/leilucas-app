@@ -33,7 +33,7 @@ p:last-child {
 
       <h2>Professores</h2>
       <p>Prof. Dr. Elvio Gilberto da Silva</p>
-      <p>Prof. Dra. Marcia Aparecida Nuevo Gatti</p>
+      <p>Profª. Dra. Marcia Aparecida Nuevo Gatti (Colaboradora)</p>
 
       <h2>Disciplina</h2>
       <p>Desenvolvimento de Software</p>
@@ -61,6 +61,7 @@ export default {
   components: {
     IonPage,
   },
+
   data() {
     return {
       logoUSC: logoUSCClaro,
@@ -68,6 +69,7 @@ export default {
       logoReitoria: logoReitoriaClaro,
     };
   },
+  
   mounted() {
     const prefereModoEscuro = window.matchMedia("(prefers-color-scheme: dark)");
 
@@ -77,6 +79,7 @@ export default {
       this.atualizarLogo(prefereModoEscuro.matches);
     });
   },
+
   methods: {
     detectarModoClaroEscuro() {
       this.atualizarLogo(

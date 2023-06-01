@@ -113,5 +113,11 @@ export default {
     AppCabecalho,
     MenuPrincipalIcones,
   },
+  beforeRouteEnter() {
+    window.screen.orientation.lock('portrait');
+  },
+  beforeRouteLeave() {
+    window.screen.orientation.unlock();
+  }
 };
 </script>
