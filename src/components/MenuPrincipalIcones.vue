@@ -33,6 +33,13 @@ ion-avatar a img {
 }
 </style>
 
+<style scoped>
+a {
+  background: none;
+    overflow: var(--overflow);
+    display: inline;
+}</style>
+
 <template>
   <ion-col>
     <ion-avatar class="ion-activatable" :aria-label="titulo">

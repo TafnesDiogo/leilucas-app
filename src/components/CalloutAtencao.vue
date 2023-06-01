@@ -20,7 +20,7 @@ ion-card-title.ios ion-icon {
 }
 
 ion-card.md {
-    margin: 10px 0;
+    margin: 16px 0;
 }
 
 .card-content-md {
@@ -42,6 +42,10 @@ ion-card-title ion-icon.md {
     align-self: flex-start;
     font-size: 2em;
     height: 25px;
+}
+
+ion-card.md:last-child {
+    margin-bottom: 5px;
 }
 </style>
 

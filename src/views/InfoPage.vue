@@ -147,19 +147,25 @@ export default defineComponent({
           subtitulo:
             "Desobstrução de Vias Aéreas em Vítima com Idade Acima de 01 Ano",
           descricao:
-            "A obstrução das vias aéreas é uma emergência médica que pode acontecer a qualquer pessoa, e pode ser causada por um corpo estranho, alimentos ou vômitos.",
+            `A obstrução das vias aéreas é uma emergência médica que pode acontecer a
+            qualquer pessoa, e pode ser causada por um corpo estranho, alimentos ou vômitos.
+            A obstrução das vias aéreas pode ocorrer de forma parcial, na qual a pessoa
+            ainda consegue respirar, ou total, quando a passagem de ar é completamente
+            interrompida. O atendimento a essa situação é dividido em vítimas conscientes
+            com obstrução parcial ou total, e vítimas inconscientes.
+`,
           aviso: "uma situação de obstrução das vias aéreas",
           videoUrl: videoEngasgamentoAdulto,
           itens: [
             {
-              titulo: "Obstrução parcial das vias aéreas",
+              titulo: "Obstrução parcial",
               conteudo: `
                 <p>Se a vítima consegue tossir, falar ou chorar, não tente interferir. Incentive-a a continuar tossindo e fique atento.</p>
                 <p>Caso a obstrução persista, chame ajuda médica e transporte a vítima em posição confortável, mantendo-a sob observação constante.</p>
               `,
             },
             {
-              titulo: "Obstrução total das vias aéreas",
+              titulo: "Obstrução total",
               conteudo: `
                 <p>Verifique se a vítima está respirando, tossindo, falando ou chorando. Se não estiver, chame <b>imediatamente</b> ajuda médica.</p>
                 <p>Realize a Manobra de Heimlich:</p>
@@ -173,7 +179,7 @@ export default defineComponent({
               `,
             },
             {
-              titulo: "Vítima inconsciente com obstrução",
+              titulo: "Vítima inconsciente",
               conteudo: `
                 <p>Coloque a vítima em posição deitada de barriga para cima. Caso a vítima continue com obstrução total sem respirar, inicie imediatamente as compressões torácicas (massagem cardíaca):</p>
                 <ol>
@@ -197,16 +203,20 @@ export default defineComponent({
         2: {
           titulo: "Engasgamento (Menor de 01 ano)",
           subtitulo: "Desobstrução de Vias Aéreas em Bebês com Objetos Sólidos",
-          descricao: `Se você se deparar com um bebê que está sufocando devido a um objeto
-        sólido obstruindo suas vias aéreas, é importante agir rapidamente para
-        remover o objeto e permitir que o bebê respire normalmente. Aqui está um
-        guia simples que descreve como desobstruir as vias aéreas em bebês com
-        objetos sólidos:`,
+          descricao: `
+            Se você se deparar com um bebê que está sufocando devido a um objeto sólido
+            obstruindo suas vias aéreas, é importante agir rapidamente para remover o objeto
+            e permitir que o bebê respire normalmente. A obstrução das vias aéreas pode
+            ocorrer de forma parcial, na qual a pessoa ainda consegue respirar, ou total,
+            quando a passagem de ar é completamente interrompida. O atendimento a essa
+            situação é dividido em vítimas conscientes com obstrução parcial ou total, e
+            vítimas inconscientes. Abaixo será apresentado um guia simples que descreve como
+            desobstruir as vias aéreas em bebês com objetos sólidos.`,
           aviso: "um bebê que está sufocando devido a um objeto sólido",
           videoUrl: videoEngasgamentoBebe,
           itens: [
             {
-              titulo: "Obstrução parcial das vias aéreas",
+              titulo: "Obstrução parcial",
               conteudo: `
               <p>
             Se o bebê estiver tossindo, chorando ou apresentando outros sinais
@@ -216,7 +226,7 @@ export default defineComponent({
             </p>`,
             },
             {
-              titulo: "Obstrução total das vias aéreas",
+              titulo: "Obstrução total",
               conteudo: `
           <p>
             Se o bebê apresentar sinais de obstrução total, como choro fraco,
@@ -248,7 +258,7 @@ export default defineComponent({
           </ol>`,
             },
             {
-              titulo: "Vítima inconsciente com obstrução",
+              titulo: "Vítima inconsciente",
               conteudo: `
                 <p>
             Se o bebê ficar inconsciente, comece a reanimação cardiopulmonar
@@ -528,35 +538,35 @@ export default defineComponent({
               titulo: "Primeiros Socorros",
               conteudo: `
                     <h2>Resfrie a região afetada</h2>
-                    Lave a queimadura com água
+                    <p>Lave a queimadura com água
                     corrente em temperatura ambiente, por pelo menos 20 minutos. Não
                     utilize água quente ou gelada, pois isso pode agravar a lesão. Se
                     possível, retire roupas ou objetos que estejam cobrindo a área
-                    queimada.
+                    queimada.</p>
 
                     <h2>Não rompa as bolhas</h2>
-                    As bolhas são uma forma do organismo
+                    <p>As bolhas são uma forma do organismo
                     proteger a lesão. Não as estoure ou retire a pele queimada, pois
-                    isso pode aumentar o risco de infecção e agravar a lesão.
+                    isso pode aumentar o risco de infecção e agravar a lesão.</p>
 
                     <h2>Hidrate o ferimento</h2>
-                    Se tiver à mão, <b>use soro fisiológico</b>
+                    <p>Se tiver à mão, <b>use soro fisiológico</b>
                     para hidratar a queimadura. Não coloque nenhuma outra substância,
                     como pasta de dente, pó de café ou óleos, pois isso pode
-                    contaminar a lesão e piorar a situação.
+                    contaminar a lesão e piorar a situação.</p>
                     
                     <h2>Procure um médico</h2>
-                    Se a queimadura for de segundo ou
+                    <p>Se a queimadura for de segundo ou
                     terceiro grau, se a área queimada for grande, se houver dor
                     intensa ou se você tiver dúvidas sobre como proceder, procure um
                     médico imediatamente. O profissional pode avaliar a gravidade da
-                    lesão e indicar o tratamento adequado.
+                    lesão e indicar o tratamento adequado.</p>
                     
                     <h2>Evite cobrir a lesão</h2>
-                    Não cubra a queimadura com tecidos ou
+                    <p>Não cubra a queimadura com tecidos ou
                     outros materiais. A área queimada precisa respirar para se
                     recuperar adequadamente. Se necessário, o médico pode indicar o
-                    uso de curativos específicos.
+                    uso de curativos específicos.</p>
                     `,
             },
           ],
@@ -653,29 +663,29 @@ export default defineComponent({
               contato com o atendimento de emergência.</p>
                 
                   <h2>Sua localização</h2>
-                  Inclui endereço completo e ponto de referência. <br />Caso
+                  <p>Inclui endereço completo e ponto de referência. Caso
                   não saiba, procure algum morador, placas ou localize-se por um aplicativo de
-                  GPS, como o <a href="https://www.google.com/maps/" target="_blank">Google Maps</a>.
+                  GPS, como o <a href="https://www.google.com/maps/" target="_blank">Google Maps</a>.</p>
                 
                 
                   <h2>O que está acontecendo com a vítima</h2>
-                  É de suma importância estar próximo à vítima para informar com clareza
+                  <p>É de suma importância estar próximo à vítima para informar com clareza
                   e calma o que aconteceu, assim os atendentes podem agilizar o
-                  atendimento e te orientar sobre as atitudes que podem ser tomadas no local.
+                  atendimento e te orientar sobre as atitudes que podem ser tomadas no local.</p>
                 
                   <h2>Mantenha a calma</h2>
-                  O atendente que vai te atender quer te ajudar, mas
+                  <p>O atendente que vai te atender quer te ajudar, mas
                   para que o atendimento seja efetivo, ele também precisa da sua cooperação. 
                   Lembre-se que o profissional em socorro está do outro lado da linha. Portanto, 
                   responda as perguntas que lhe forem feitas com calma e clareza, faça o que lhe 
                   for orientado. Sua atitude pode salvar vidas! Ajude os profissionais de segurança
-                  pública a te ajudarem.
+                  pública a te ajudarem.</p>
 
                   <h2>Para quem ligar</h2>
-                  No Brasil, temos dois números de atendimento disponíveis
+                  <p>No Brasil, temos dois números de atendimento disponíveis
                   para contato: 192 (SAMU) e 193 (Corpo de Bombeiros). O atendimento realizado por
                   estes órgãos são diferentes, e o contato com o correto irá agilizar no socorro da 
-                  vítima. Veja abaixo os atendimentos específicos de cada órgão.
+                  vítima. Veja abaixo os atendimentos específicos de cada órgão.</p>
                   `,
             },
             {

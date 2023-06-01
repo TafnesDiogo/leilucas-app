@@ -22,6 +22,14 @@ ion-accordion h2 {
   text-align: left;
 }
 
+ion-accordion-group:last-child {
+    margin: 0 0 8px;
+}
+
+ion-accordion-group:last-child ion-accordion.accordion-expanded:last-child {
+    margin-bottom: -5px;
+}
+
 @media (prefers-color-scheme: dark) {
   div[slot='content'] {
     background: rgba(var(--ion-color-light-rgb),0.25);

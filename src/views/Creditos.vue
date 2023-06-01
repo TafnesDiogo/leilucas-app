@@ -1,11 +1,11 @@
 <style scoped>
-img {
+img:nth-of-type(1) {
   margin: -16px;
   width: calc(110% + 32px);
   max-width: -webkit-fill-available;
 }
 p,
-h1 {
+h2 {
   text-align: center;
 }
 
@@ -22,24 +22,24 @@ p:last-child {
   <ion-page>
     <base-layout titulo="Créditos">
       <img :src="logoUSC" alt="Logo UNISAGRADO" />
-      <h1>Desenvolvimento</h1>
+      <h2>Desenvolvimento</h2>
       <img :src="logoCurso" alt="UNISAGRADO: Curso de Ciência da Computação" />
 
-      <h1>Apoio</h1>
+      <h2>Apoio</h2>
       <img
         :src="logoReitoria"
         alt="UNISAGRADO: Pró-Reitoria de Extensão e Pastoral Universitária"
       />
 
-      <h1>Professores</h1>
-      <p>Prof. Dr. Élvio Gilberto da Silva</p>
+      <h2>Professores</h2>
+      <p>Prof. Dr. Elvio Gilberto da Silva</p>
       <p>Prof. Dra. Marcia Aparecida Nuevo Gatti</p>
 
-      <h1>Disciplina</h1>
+      <h2>Disciplina</h2>
       <p>Desenvolvimento de Software</p>
       <p>Ciência da Computação - 3º Semestre</p>
 
-      <h1>Alunos</h1>
+      <h2>Alunos</h2>
       <p>Éder Fabiano da Silva</p>
       <p>Fabio Diogo Torres</p>
       <p>Táfnes Diogo Torres</p>

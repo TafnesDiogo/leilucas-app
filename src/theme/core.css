@@ -69,6 +69,20 @@ ion-content.ion-padding.ios {
     --padding-bottom: 52px;
 }
 
+ion-content a {
+    color: var(--ion-color-tertiary);
+    text-decoration: 1px underline solid;
+    background-image: linear-gradient(to bottom, var(--cor-sublinhado), var(--cor-sublinhado));
+    background-position: 0 calc(100% + 1px);
+    background-size: 100% 1px;
+    background-repeat: no-repeat;
+    text-decoration: none;
+    --cor-sublinhado: var(--ion-color-medium);
+    overflow: visible;
+    height: 1.4rem;
+    display: inline-block;
+}
+
 ion-accordion-group.md {
     margin: 0;
 }

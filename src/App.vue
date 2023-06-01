@@ -55,6 +55,7 @@ import {
 } from "@ionic/vue";
 import AppRodape from "./components/AppRodape.vue";
 import { defineComponent } from "vue";
+import { StatusBar } from '@capacitor/status-bar';
 
 export default defineComponent({
   name: "App",
@@ -68,4 +69,12 @@ export default defineComponent({
   IonIcon,
   },
 });
+
+const rootStyles = getComputedStyle(document.documentElement);
+
+const options = {
+  color: rootStyles.getPropertyValue('--ion-color-primary-shade').trim(),
+};
+
+StatusBar.setBackgroundColor(options)
 </script>

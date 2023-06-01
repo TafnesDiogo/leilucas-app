@@ -33,6 +33,8 @@ ion-title {
   z-index: 11;
   left: 50%;
   transform: translateX(-50%);
+  overflow: hidden;
+  border-radius: 50%;
 }
 
 .emergencia-container img:hover {
@@ -73,23 +75,20 @@ ion-buttons ion-button {
     sub-header="Selecione o número"
     :buttons="botoesActionSheet"
   />
-  <div class="emergencia-container" id="aviso-ligacao">
+  <div class="emergencia-container ion-activatable" id="aviso-ligacao">
     <img :src="botaoEmergenciaImagem" />
+    <ion-ripple-effect />
   </div>
   <ion-footer>
     <ion-toolbar color="primary">
-      <ion-buttons slot="start">
-        <router-link :to="{ name: 'SobrePage' }">
-          <ion-button>Sobre o App</ion-button>
-        </router-link>
+      <ion-buttons slot="start" :router-link="{ name: 'SobrePage' }">
+        <ion-button>Sobre o App</ion-button>
       </ion-buttons>
 
       <ion-title />
 
-      <ion-buttons slot="end">
-        <router-link :to="{ name: 'ComoUsarPage' }">
-          <ion-button>Como usar</ion-button>
-        </router-link>
+      <ion-buttons slot="end" :router-link="{ name: 'ComoUsarPage' }">
+        <ion-button>Como usar</ion-button>
       </ion-buttons>
     </ion-toolbar>
   </ion-footer>
@@ -105,6 +104,7 @@ import {
   IonIcon,
   IonActionSheet,
   IonAlert,
+  IonRippleEffect,
 } from "@ionic/vue";
 import { addCircleSharp } from "ionicons/icons";
 import { actionSheetController } from "@ionic/core";
@@ -122,6 +122,7 @@ export default {
     IonIcon,
     IonActionSheet,
     IonAlert,
+    IonRippleEffect,
   },
 
   setup() {

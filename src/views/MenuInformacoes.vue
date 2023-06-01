@@ -1,8 +1,4 @@
 <style scoped>
-a {
-    color: transparent;
-}
-
 .container {
   padding-top: 16px;
 }
@@ -11,15 +7,25 @@ a {
 <template>
   <ion-page>
     <base-layout>
-    <div class="container">
+      <div class="container">
+        <!--
       <router-link
         v-for="tema in temas"
         :key="tema.id"
         :to="`/info/${tema.id}`"
         :color="tema.color">
         <ion-button :color="tema.color" expand="block">{{ tema.nome }}</ion-button>
-      </router-link>
-    </div>
+      </router-link>-->
+        <ion-button
+          v-for="tema in temas"
+          :key="tema.id"
+          :color="tema.color"
+          expand="block"
+          :router-link="`/info/${tema.id}`"
+        >
+          {{ tema.nome }}
+        </ion-button>
+      </div>
     </base-layout>
   </ion-page>
 </template>
