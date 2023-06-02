@@ -42,6 +42,23 @@ ion-col.logo:after {
   background-size: contain;
 }
 
+ion-grid.landscape-layout {
+  gap: 3px;
+}
+
+ion-grid.landscape-layout ion-row:last-child {
+  margin: 0 25vh;
+}
+
+ion-grid.landscape-layout ion-col.logo img {
+  max-width: 100vh;
+}
+
+ion-grid.landscape-layout ion-col.logo:before,
+ion-col.logo:after {
+  width: 100%;
+}
+
 @media (prefers-color-scheme: dark) {
   ion-content {
     --background: linear-gradient(
@@ -67,7 +84,7 @@ ion-col.logo:after {
   <ion-page>
     <app-cabecalho />
     <ion-content>
-      <ion-grid>
+      <ion-grid v-if="orientacao === 'portrait-layout'">
         <ion-row>
           <menu-principal-icones rota="MenuInformacoesPage" titulo="Conteúdo"
             ><img src="../assets/icons/conteudo.png" />
@@ -86,6 +103,34 @@ ion-col.logo:after {
           </ion-col>
         </ion-row>
         <ion-row>
+          <menu-principal-icones titulo="Lei Lucas" rota="LeiLucasPage">
+            <img src="../assets/icons/lei.png" />
+          </menu-principal-icones>
+          <menu-principal-icones titulo="Créditos" rota="CreditosPage">
+            <img src="../assets/icons/informacao.png" />
+          </menu-principal-icones>
+        </ion-row>
+      </ion-grid>
+      <ion-grid
+        v-if="orientacao === 'landscape-layout'"
+        class="landscape-layout"
+      >
+        <ion-row>
+          <ion-col class="logo">
+            <img src="/src/assets/imagens/lei_lucas.png" />
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <menu-principal-icones rota="MenuInformacoesPage" titulo="Conteúdo"
+            ><img src="../assets/icons/conteudo.png" />
+          </menu-principal-icones>
+          <menu-principal-icones
+            rota="https://www.google.com/maps/"
+            titulo="Localização"
+            :interno="false"
+          >
+            <img src="../assets/icons/localizacao.png"
+          /></menu-principal-icones>
           <menu-principal-icones titulo="Lei Lucas" rota="LeiLucasPage">
             <img src="../assets/icons/lei.png" />
           </menu-principal-icones>
@@ -113,11 +158,43 @@ export default {
     AppCabecalho,
     MenuPrincipalIcones,
   },
-  beforeRouteEnter() {
-    window.screen.orientation.lock('portrait');
+  data() {
+    return {
+      orientacao:
+        window.screen.orientation.type == "portrait-primary" ||
+        "portrait-secondary"
+          ? "portrait-layout"
+          : "landscape-layout",
+    };
   },
-  beforeRouteLeave() {
-    window.screen.orientation.unlock();
+  methods: {
+    detectarOrientacao() {
+      if (
+        window.screen.orientation.type === "portrait-primary" ||
+        window.screen.orientation.type === "portrait-secondary"
+      ) {
+        this.orientacao = "portrait-layout";
+      } else {
+        this.orientacao = "landscape-layout";
+      }
+
+      window.screen.orientation.addEventListener("change", (event) => {
+        if (
+          window.screen.orientation.type === "portrait-primary" ||
+          window.screen.orientation.type === "portrait-secondary"
+        ) {
+          this.orientacao = "portrait-layout";
+        } else {
+          this.orientacao = "landscape-layout";
+        }
+      });
+    },
+  },
+  mounted() {
+    this.detectarOrientacao();
+  },
+  beforeUnmount() {
+    window.screen.orientation.removeEventListener;
   }
 };
 </script>
