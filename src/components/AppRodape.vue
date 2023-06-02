@@ -152,8 +152,8 @@ export default {
       await actionSheet.present();
     };
 
-    const confirmarLigacao = async () => {
-      await presentActionSheet();
+    const confirmarLigacao = () => {
+      presentActionSheet();
     };
 
     const botoesAlerta = [
