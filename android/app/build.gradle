@@ -1,10 +1,18 @@
 apply plugin: 'com.android.application'
 
 android {
-    namespace "io.ionic.starter"
+    signingConfigs {
+        release {
+            storePassword 'KZY0974-.a'
+            storeFile file('C:\\Users\\Ryzen\\Documents\\1 Projetos\\Desenvolvimento de Software\\chave.jks')
+            keyAlias 'chaveUpload'
+            keyPassword 'KZY0974-.a'
+        }
+    }
+    namespace "br.com.unisagrado.soslucas"
     compileSdkVersion rootProject.ext.compileSdkVersion
     defaultConfig {
-        applicationId "io.ionic.starter"
+        applicationId "br.com.unisagrado.soslucas"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
@@ -19,7 +27,9 @@ android {
     buildTypes {
         release {
             minifyEnabled false
+            debuggable false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
         }
     }
 }
