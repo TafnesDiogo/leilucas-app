@@ -1,6 +1,7 @@
+![SOS Lucas](https://github.com/TafnesDiogo/leilucas-app/assets/98832596/6549a786-cae9-47ae-bdcd-c7e7cee2318b)
 # SOS Lucas
 
-Este aplicativo foi desenvolvido com o objetivo de promover a preparação de profissionais da rede estudantil em primeiros socorros, de acordo com a Lei Lucas. Foram utilizadas as seguintes tecnologias: Android Studio, Ionic + Vue.js com Capacitor, VideoScribe, Figma, ChatGPT, entre outros.
+Este aplicativo foi desenvolvido com o objetivo de promover a preparação de profissionais da rede estudantil em primeiros socorros, de acordo com a Lei Lucas. Foram utilizadas as seguintes tecnologias: Android Studio, Ionic + Vue.js com Capacitor, VideoScribe, Figma, ChatGPT, entre outros. Já está disponível para download na [Play Store](https://play.google.com/store/apps/details?id=fireforce.sos.lucas)!
 
 ## Descrição
 O aplicativo "Primeiros Socorros - Lei Lucas" é um projeto desenvolvido para fornecer informações didáticas sobre primeiros socorros, com foco nos funcionários de instituições de ensino que tenham feito o curso da Lei Lucas. O objetivo principal do aplicativo é reforçar e relembrar os conhecimentos adquiridos no curso, não substituindo a formação completa.
