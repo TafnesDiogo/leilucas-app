@@ -50,6 +50,4 @@ Para a criação dos vídeos informativos, utilizamos a ferramenta VideoScribe. 
 
 Fabio Diogo Torres 
 
-Táfnes Diogo Torres 
-
-Vinicius Luciano da Silva
+Táfnes Diogo Torres
